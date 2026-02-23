@@ -16,3 +16,5 @@ out/
 *.class
 *.jar
 bin/
+
+.pdf

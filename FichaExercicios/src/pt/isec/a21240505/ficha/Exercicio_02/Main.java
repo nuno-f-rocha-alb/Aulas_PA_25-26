@@ -1,4 +1,4 @@
-package Exercicio_02;
+package pt.isec.a21240505.ficha.Exercicio_02;
 
 import java.util.Random;
 import java.util.Scanner;

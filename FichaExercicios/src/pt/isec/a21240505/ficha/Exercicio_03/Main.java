@@ -1,4 +1,4 @@
-package Exercicio_03;
+package pt.isec.a21240505.ficha.Exercicio_03;
 
 import java.util.Scanner;
 
