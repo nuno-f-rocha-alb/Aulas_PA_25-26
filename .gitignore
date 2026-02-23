@@ -17,4 +17,5 @@ out/
 *.jar
 bin/
 
+# PDF Files
 *.pdf
