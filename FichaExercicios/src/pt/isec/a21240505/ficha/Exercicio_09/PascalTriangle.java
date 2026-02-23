@@ -5,24 +5,42 @@ public class PascalTriangle {
     int [][] triangle;
     int n;
 
-    public PascalTriangle(int n) {
-        triangle = new int[n][n];
-        this.n = n;
-        generate();
 
+    public PascalTriangle(int n){
+        triangle = new int[n][];
+        this.n = n;
+        generate(n);
     }
 
-    private void generate(){
-        int i, j;
-        triangle[0][0] = 1;
-        for (i = 1; i < triangle.length; i++) {
+    private void generate(int n){
+        triangle[0] = new int[]{1};
+        for(int i = 1; i < n; i++){
+            triangle[i] = new int[i+1];
             triangle[i][0] = 1;
-            for (j = 1; j < triangle[i].length - 1; j++) {
-                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+            for(int j = 1; j < i; j++){
+                triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
             }
             triangle[i][i] = 1;
         }
     }
+//    public PascalTriangle(int n) {
+//        triangle = new int[n][n];
+//        this.n = n;
+//        generate();
+//
+//    }
+//
+//    private void generate(){
+//        int i, j;
+//        triangle[0][0] = 1;
+//        for (i = 1; i < triangle.length; i++) {
+//            triangle[i][0] = 1;
+//            for (j = 1; j < triangle[i].length - 1; j++) {
+//                triangle[i][j] = triangle[i - 1][j - 1] + triangle[i - 1][j];
+//            }
+//            triangle[i][i] = 1;
+//        }
+//    }
 
     public String getString() {
         StringBuilder sb = new StringBuilder();
